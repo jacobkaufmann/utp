@@ -276,7 +276,7 @@ impl Controller {
     }
 
     /// Registers a timeout with the controller.
-    fn on_timeout(&mut self) {
+    pub fn on_timeout(&mut self) {
         self.max_window_size_bytes = self.min_window_size_bytes;
         self.timeout *= 2;
     }
